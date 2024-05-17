@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdw8mwuue8v45"]
+
+[ext_resource type="Texture2D" uid="uid://dbguqjap0uayb" path="res://art/skeleton-attack_0.png" id="1_3roqh"]
+[ext_resource type="Script" path="res://zombie.gd" id="1_wyify"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_40o7o"]
+radius = 82.2192
+
+[node name="zombie" type="CharacterBody2D"]
+scale = Vector2(0.8, 0.8)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_wyify")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_40o7o")
+
+[node name="graphics" type="Node2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="alive" type="Sprite2D" parent="graphics"]
+modulate = Color(0.0475577, 0.0475576, 0.0475576, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-8, -39)
+rotation = -1.57929
+texture = ExtResource("1_3roqh")
+
+[node name="dead" type="Sprite2D" parent="graphics"]
+visible = false
+modulate = Color(0.941176, 0.0941176, 0.980392, 1)
+z_index = -1
+position = Vector2(-6, -40)
+rotation = -1.5708
+texture = ExtResource("1_3roqh")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, -42.5)
+collision_mask = 3

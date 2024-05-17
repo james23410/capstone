@@ -1,0 +1,553 @@
+[gd_scene load_steps=29 format=3 uid="uid://cfrnjmg78pnm5"]
+
+[ext_resource type="Texture2D" uid="uid://d34mla4150ogl" path="res://art/white.PNG" id="1_1a2vs"]
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_3tsf1"]
+[ext_resource type="PackedScene" uid="uid://dny57any40y7k" path="res://scenes/player.tscn" id="2_2mwex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8x7p1"]
+size = Vector2(230.067, 222.327)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nso3c"]
+polygon = PackedVector2Array(207, 327, 293, 327, 290, 4, 210, 4, 208.077, 211.064)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xd2gd"]
+size = Vector2(231.635, 219)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lldme"]
+size = Vector2(237, 211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3scs"]
+size = Vector2(228.8, 209.804)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3m80g"]
+polygon = PackedVector2Array(1222, 36, 1222, 187, 1091, 187, 1091, 39)
+
+[sub_resource type="Curve2D" id="Curve2D_vkp7m"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 4022, -117, 0, 0, 0, 0, 4066.81, 1173.25, 0, 0, 0, 0, 4111.57, 1241.49, 0, 0, 0, 0, 4030, 2536, 0, 0, 0, 0, 1924.19, 2957.49, 0, 0, 0, 0, -182, 2536, 0, 0, 0, 0, -272.245, 1182.53, 0, 0, 0, 0, -191, -117)
+}
+point_count = 8
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ytk8f"]
+polygon = PackedVector2Array(424, 105, 426, 512, 527, 512, 522, 108)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rbdx2"]
+polygon = PackedVector2Array(13, 599, 407, 596, 407, 710, 3, 718, 6, 596)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3hq28"]
+polygon = PackedVector2Array(752, 148, 754, 517, 669, 517, 669, 140)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_76ftc"]
+polygon = PackedVector2Array(610, 842, 731, 839, 747, 1026, 3045, 1029, 3054, 1236, 626, 1239, 623, 1096, 210, 1093, 216, 969, 613, 966)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3mrrq"]
+polygon = PackedVector2Array(378, 1331, 397, 1229, -3, 1233, -3, 1353, 404, 1353, 397, 1226, 394, 1229)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hd265"]
+polygon = PackedVector2Array(960, 540, 1092, 538, 1095, 686, 962, 688)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_m5x7w"]
+polygon = PackedVector2Array(1382, 401, 1386, 554, 1250, 554, 1250, 398)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3s2lm"]
+polygon = PackedVector2Array(1443, 638, 1444, 788, 1582, 790, 1580, 638)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7sfif"]
+polygon = PackedVector2Array(1867, 633, 1867, 786, 1999, 793, 2006, 636)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ikqqs"]
+polygon = PackedVector2Array(1650, 854, 1651, 1008, 1791, 1010, 1795, 848)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_38a8k"]
+polygon = PackedVector2Array(2198, 413, 2198, 566, 2348, 563, 2348, 413)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_swwb0"]
+polygon = PackedVector2Array(1744, 345, 1744, 500, 1613, 497, 1602, 349)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y7upr"]
+polygon = PackedVector2Array(1552, 96, 1552, 244, 1424, 251, 1417, 93)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_aekw5"]
+polygon = PackedVector2Array(2400, 136, 2397, 299, 2261, 299, 2264, 139)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_s751b"]
+polygon = PackedVector2Array(1871, 641, 1874, 785, 2004, 791, 2007, 638)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j7f8v"]
+polygon = PackedVector2Array(2409, 762, 2408, 915, 2275, 917, 2278, 760)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7aj0r"]
+polygon = PackedVector2Array(1174, 813, 1175, 967, 1032, 970, 1032, 814)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_owkks"]
+polygon = PackedVector2Array(2066, 166, 2068, 316, 1931, 321, 1927, 173)
+
+[node name="world" type="Node2D"]
+position = Vector2(-2, 0)
+script = ExtResource("1_3tsf1")
+
+[node name="environment" type="Node2D" parent="."]
+
+[node name="floor" type="Sprite2D" parent="environment"]
+modulate = Color(0.0392157, 0.0392157, 0.0392157, 1)
+z_index = -2
+position = Vector2(1392.5, 840.5)
+scale = Vector2(17.4744, 11.5935)
+texture = ExtResource("1_1a2vs")
+
+[node name="block" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(251.5, 163.5)
+scale = Vector2(0.380342, 1.54673)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/block"]
+position = Vector2(18.1072, 16.759)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="environment/block/StaticBody2D"]
+position = Vector2(-19.4217, -16.1507)
+shape = SubResource("RectangleShape2D_8x7p1")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="environment/block"]
+position = Vector2(-661.247, -105.707)
+scale = Vector2(2.62921, 0.646525)
+occluder = SubResource("OccluderPolygon2D_nso3c")
+
+[node name="block4" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(251.5, 163.5)
+scale = Vector2(0.380342, 1.54673)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/block4"]
+position = Vector2(59.1573, 44.9335)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="environment/block4/StaticBody2D"]
+position = Vector2(1221.57, 697.328)
+shape = SubResource("RectangleShape2D_8x7p1")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="environment/block4"]
+position = Vector2(624.438, 637.151)
+scale = Vector2(2.62921, 0.646525)
+occluder = SubResource("OccluderPolygon2D_nso3c")
+
+[node name="block5" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(251.5, 163.5)
+scale = Vector2(0.380342, 1.54673)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/block5"]
+position = Vector2(85.4494, 15.8399)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="environment/block5/StaticBody2D"]
+position = Vector2(1864.76, 839.836)
+shape = SubResource("RectangleShape2D_8x7p1")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="environment/block5"]
+position = Vector2(1305.4, 748.353)
+scale = Vector2(2.62921, 0.646525)
+occluder = SubResource("OccluderPolygon2D_nso3c")
+
+[node name="block2" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 0.0235294, 1, 1)
+position = Vector2(708, 333.75)
+scale = Vector2(0.41453, 1.77804)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/block2"]
+position = Vector2(26.5361, -297.378)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="environment/block2/StaticBody2D"]
+position = Vector2(-22.8591, 296.521)
+shape = SubResource("RectangleShape2D_8x7p1")
+
+[node name="block3" type="Sprite2D" parent="environment"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(471, 307.25)
+scale = Vector2(0.41453, 1.81542)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/block3"]
+position = Vector2(15.3215, -292.639)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="environment/block3/StaticBody2D"]
+position = Vector2(-12.9092, 294.788)
+shape = SubResource("RectangleShape2D_8x7p1")
+
+[node name="Sprite2D" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0.737255, 0, 0.741176, 1)
+position = Vector2(1901.5, 1136)
+scale = Vector2(9.88461, 1)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D/StaticBody2D"]
+position = Vector2(-0.777863, -1)
+shape = SubResource("RectangleShape2D_xd2gd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(205, 655.5)
+scale = Vector2(1.7094, 0.584112)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D2"]
+position = Vector2(16, -21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D2/StaticBody2D"]
+position = Vector2(-17.755, 21.856)
+shape = SubResource("RectangleShape2D_lldme")
+
+[node name="Sprite2D9" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(418, 1034)
+scale = Vector2(1.7094, 0.584112)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D9"]
+position = Vector2(21.645, 267.072)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D9/StaticBody2D"]
+position = Vector2(-23.4, -271.352)
+shape = SubResource("RectangleShape2D_lldme")
+
+[node name="Sprite2D10" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(202, 1290)
+scale = Vector2(1.7094, 0.584112)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D10"]
+position = Vector2(1.17, 5.1358)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D10/StaticBody2D"]
+position = Vector2(-1.17, 1.7121)
+shape = SubResource("RectangleShape2D_lldme")
+
+[node name="Sprite2D11" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(678, 1039)
+rotation = -1.61398
+scale = Vector2(1.7094, 0.584112)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D11"]
+position = Vector2(16, -21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D11/StaticBody2D"]
+position = Vector2(-17.2447, 25.9834)
+shape = SubResource("RectangleShape2D_lldme")
+
+[node name="1738" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1157.5, 113.5)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/1738"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/1738/StaticBody2D"]
+position = Vector2(-0.866699, 0.699356)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="environment/1738"]
+position = Vector2(-2006.33, -158.752)
+scale = Vector2(1.73333, 1.39869)
+occluder = SubResource("OccluderPolygon2D_3m80g")
+
+[node name="1739" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1157.5, 113.5)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/1739"]
+position = Vector2(-6.06667, 17.4837)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/1739/StaticBody2D"]
+position = Vector2(2703.13, 79.0262)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="environment/1739"]
+position = Vector2(704.6, -52.451)
+scale = Vector2(1.73333, 1.39869)
+occluder = SubResource("OccluderPolygon2D_3m80g")
+
+[node name="1740" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1157.5, 113.5)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/1740"]
+position = Vector2(-6.06667, 17.4837)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/1740/StaticBody2D"]
+position = Vector2(2835.73, 583.255)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="environment/1740"]
+position = Vector2(822.467, 456.673)
+scale = Vector2(1.73333, 1.39869)
+occluder = SubResource("OccluderPolygon2D_3m80g")
+
+[node name="1741" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1157.5, 113.5)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/1741"]
+position = Vector2(-6.06667, 17.4837)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/1741/StaticBody2D"]
+position = Vector2(2794.13, 958.105)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="environment/1741"]
+position = Vector2(808.6, 814.739)
+scale = Vector2(1.73333, 1.39869)
+occluder = SubResource("OccluderPolygon2D_3m80g")
+
+[node name="Sprite2D4" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1510, 710)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D4"]
+position = Vector2(-15.6, -6.99347)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D4/StaticBody2D"]
+position = Vector2(19.0666, 4.19611)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D5" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1024, 615)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D5"]
+position = Vector2(3.46667, -5.59479)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D5/StaticBody2D"]
+position = Vector2(3.46663, 1.39868)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D6" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1486, 175)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D6"]
+position = Vector2(0, -5.59477)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D6/StaticBody2D"]
+position = Vector2(-8.66669, 1.39869)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D7" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1314, 477)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D7"]
+position = Vector2(-6.93333, 6.99346)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D7/StaticBody2D"]
+position = Vector2(15.6, -2.79738)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D8" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1999, 244)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D8"]
+position = Vector2(-3.46664, 2.79739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D8/StaticBody2D"]
+position = Vector2(-3.05176e-05, -2.79739)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D12" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(2339, 840)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D12"]
+position = Vector2(3.46667, 13.9869)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D12/StaticBody2D"]
+position = Vector2(0, -19.5817)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D13" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(2327, 216)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D13"]
+position = Vector2(-38.1333, 13.9869)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D13/StaticBody2D"]
+position = Vector2(48.5333, -13.9869)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D14" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(2271, 488)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D14"]
+position = Vector2(-17.3333, -8.39215)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D14/StaticBody2D"]
+position = Vector2(20.8, 8.39215)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D15" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1723, 924)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D15"]
+position = Vector2(-3.46664, -13.9869)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D15/StaticBody2D"]
+position = Vector2(-6.93335, 30.7712)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D16" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1939, 708)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D16"]
+position = Vector2(3.46669, -8.39216)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D16/StaticBody2D"]
+position = Vector2(-6.93335, 19.5817)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D17" type="Sprite2D" parent="environment"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(1103, 888)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D17"]
+position = Vector2(-3.46667, -25.1765)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D17/StaticBody2D"]
+position = Vector2(-3.05176e-05, 30.7712)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="Sprite2D18" type="Sprite2D" parent="environment"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1675, 424)
+scale = Vector2(0.576923, 0.714953)
+texture = ExtResource("1_1a2vs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="environment/Sprite2D18"]
+position = Vector2(24.2667, -2.79739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environment/Sprite2D18/StaticBody2D"]
+position = Vector2(-20.8, 2.79739)
+shape = SubResource("RectangleShape2D_c3scs")
+
+[node name="player" parent="." instance=ExtResource("2_2mwex")]
+position = Vector2(1282, 718)
+
+[node name="Path2D" type="Path2D" parent="player"]
+position = Vector2(-4616.11, -2157.84)
+scale = Vector2(2.67119, 2.06972)
+curve = SubResource("Curve2D_vkp7m")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(4022, -117)
+rotation = 1.53608
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ytk8f")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+position = Vector2(21, -5)
+occluder = SubResource("OccluderPolygon2D_rbdx2")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_3hq28")
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_76ftc")
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_3mrrq")
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_hd265")
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_m5x7w")
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_3s2lm")
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_7sfif")
+
+[node name="LightOccluder2D12" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ikqqs")
+
+[node name="LightOccluder2D13" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_38a8k")
+
+[node name="LightOccluder2D14" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_swwb0")
+
+[node name="LightOccluder2D15" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_y7upr")
+
+[node name="LightOccluder2D17" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_aekw5")
+
+[node name="LightOccluder2D18" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_s751b")
+
+[node name="LightOccluder2D19" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_j7f8v")
+
+[node name="LightOccluder2D20" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_7aj0r")
+
+[node name="LightOccluder2D21" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_owkks")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="game_time" type="Timer" parent="."]
+
+[node name="TimerLabel" type="Label" parent="game_time"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

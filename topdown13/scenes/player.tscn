@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=3 uid="uid://dny57any40y7k"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_cjsc0"]
+[ext_resource type="Texture2D" uid="uid://bervrfhpj8wcs" path="res://art/survivor-idle_rifle_0.png" id="2_spmi1"]
+[ext_resource type="Texture2D" uid="uid://cc556v32dx3f6" path="res://art/New Piskel.png" id="3_gdmvp"]
+[ext_resource type="Texture2D" uid="uid://ckgs8aheemumb" path="res://art/whitecirclenum2.png" id="4_jg4hp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wy8gq"]
+radius = 83.0241
+
+[node name="player" type="CharacterBody2D" groups=["player"]]
+scale = Vector2(0.3, 0.3)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_cjsc0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wy8gq")
+
+[node name="graphics" type="Node2D" parent="."]
+
+[node name="alive" type="Sprite2D" parent="graphics"]
+position = Vector2(-8, -39)
+rotation = -1.57929
+texture = ExtResource("2_spmi1")
+
+[node name="dead" type="Sprite2D" parent="graphics"]
+visible = false
+modulate = Color(0.839216, 0.0784314, 0, 1)
+z_index = -1
+texture = ExtResource("2_spmi1")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(40, 5)
+target_position = Vector2(0, -2000)
+collision_mask = 3
+
+[node name="muzzle_flash" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 0.52549, 1)
+position = Vector2(42.359, -235.039)
+rotation = -1.5908
+scale = Vector2(2.5, 2.273)
+texture = ExtResource("3_gdmvp")
+
+[node name="Timer" type="Timer" parent="muzzle_flash"]
+wait_time = 0.079
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="death_screen" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/death_screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101961, 0.101961, 0.101961, 1)
+
+[node name="Panel" type="Panel" parent="CanvasLayer/death_screen"]
+modulate = Color(0.301961, 0.301961, 0.301961, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -102.0
+offset_right = 156.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/death_screen/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -38.0
+offset_right = 38.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "YOU DIED"
+
+[node name="Button" type="Button" parent="CanvasLayer/death_screen/Panel/Label"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = 2.0
+offset_right = 38.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "RESTART"
+
+[node name="game_time" type="Timer" parent="CanvasLayer/death_screen"]
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer/death_screen/game_time"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.0
+offset_right = 44.0
+offset_bottom = 107.0
+grow_horizontal = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(13.0667, 12.3704)
+energy = 12.69
+shadow_enabled = true
+texture = ExtResource("4_jg4hp")
+
+[connection signal="timeout" from="muzzle_flash/Timer" to="muzzle_flash" method="hide"]
+[connection signal="button_up" from="CanvasLayer/death_screen/Panel/Label/Button" to="." method="restart"]
